@@ -1,5 +1,6 @@
 import { Link, Outlet } from 'react-router-dom';
-import classes from './App.module.scss';
+import { adminRoutes } from '@packages/shared/src/routes/admin'
+import { shopRoutes } from '@packages/shared/src/routes/shop'
 
 export const App = () => {
   return (
@@ -7,10 +8,18 @@ export const App = () => {
       <h1>Page</h1>
       <ul>
         <li>
-          <Link to={'/about'}>About</Link>
+          <Link to={adminRoutes.about}>Admin</Link>
         </li>
         <li>
-          <Link to={'/shop'}>Shop</Link>
+          Shop
+          <ul>
+            <li>
+              <Link to={shopRoutes.main}>Shop Main</Link>
+            </li>
+            <li>
+              <Link to={shopRoutes.second}>Shop Second</Link>
+            </li>
+          </ul>
         </li>
       </ul>
       <Outlet />

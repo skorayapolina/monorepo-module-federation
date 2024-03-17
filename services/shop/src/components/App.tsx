@@ -1,18 +1,9 @@
-import { Link, Outlet } from 'react-router-dom';
-import classes from './App.module.scss';
+import { Outlet } from 'react-router-dom';
 
 export const App = () => {
   return (
-    <div data-testid="test-is-div">
-      <h1>Page</h1>
-      <ul>
-        <li>
-          <Link to={'/about'}>About</Link>
-        </li>
-        <li>
-          <Link to={'/shop'}>Shop</Link>
-        </li>
-      </ul>
+    <div>
+      <h1>Shop App</h1>
       <Outlet />
     </div>
   );

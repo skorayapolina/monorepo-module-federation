@@ -1,5 +1,5 @@
 {
   "name": "@packages/shared",
   "version": "1.0.0",
-  "main": "./src/index.ts"
+  "main": "src/routes/admin.ts"
 }
